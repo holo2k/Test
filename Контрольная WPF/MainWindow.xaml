@@ -1,0 +1,35 @@
+﻿<Window x:Class="Контрольная_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Контрольная_WPF"
+        mc:Ignorable="d"
+        Title="Вычисление заработной платы" Height="344.924" Width="833.122" Background="#FFB5D5CA">
+    <Viewbox>
+        <Grid Margin="0,0,0,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="244*"/>
+                <ColumnDefinition Width="215*"/>
+                <ColumnDefinition Width="333*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+            <Label Content="Оклад" FontSize="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="104" Height="37"/>
+            <Label Content="Премия" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="37" />
+            <Label Content="Районный коэффициент" FontSize="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="243" Height="37" />
+            <Label Content="Рабочие дни" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Height="37"/>
+            <Label Content="Отработанные дни" FontSize="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="192" Height="47"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+            <TextBox x:Name="tbOklad" FontSize="18" Grid.Column="1" Margin="0,0,0,15" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap"  VerticalAlignment="Top" Width="128" PreviewTextInput="TbOklad_PreviewTextInput"/>
+                <TextBox x:Name="tbPrem" FontSize="18" Grid.Column="1" Margin="0,0,0,15"  HorizontalAlignment="Left" Height="26"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="128"/>
+                <TextBox x:Name="tbKoef" FontSize="18" Grid.Column="1" Margin="0,0,0,15"  HorizontalAlignment="Left" Height="26"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="128"/>
+                <TextBox x:Name="tbWorkDays" FontSize="18" Grid.Column="1" Margin="0,0,0,15"  HorizontalAlignment="Left" Height="26" TextWrapping="Wrap"  VerticalAlignment="Top" Width="128"/>
+                <TextBox x:Name="tbWorkedDays" FontSize="18" Grid.Column="1"  HorizontalAlignment="Left" Height="26"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="128"/>
+            </StackPanel>
+            <Button Content="Вычислить" FontSize="18" Grid.Column="2" HorizontalAlignment="Left" Width="285" Margin="10,13,0,181" Click="Button_Click" Background="#FFD1EEFC"/>
+            <Label x:Name="lblAnswer" Content="Ответ:" FontSize="18" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="294" Height="159" Grid.Column="2"/>
+
+        </Grid>
+    </Viewbox>
+</Window>
